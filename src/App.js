@@ -4,7 +4,7 @@ import './App.css';
 import Slider from "./RangeSlider"
 import axios from "axios";
 import utils from "./utils";
-import { LineChart, Line, AreaChart, Area, Brush, XAxis, YAxis, CartesianGrid, Tooltip,Legend } from "recharts";
+import { LineChart, Line, AreaChart, Area, Brush, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from "recharts";
 
 class App extends Component {
 
@@ -40,7 +40,7 @@ class App extends Component {
     return newArray;
   }
   changeHandler(key, e) {
-    
+
     this.setState({
       [key]: e.target.value,
       rainChart: this.getRainFallAmount(this.state.amountOfRainfall.days)
@@ -50,10 +50,10 @@ class App extends Component {
     return (
       <div className="App">
         <div className="slider-container">
-          <Slider min="970" max="1030" onChange={this.changeHandler.bind(this, 'pressure')} value={this.state.pressure}>
+          <Slider min={970} max={1030} onChange={this.changeHandler.bind(this, 'pressure')} value={this.state.pressure}>
             Pressure hPa.
         </Slider>
-          <Slider min="10" max="35" onChange={this.changeHandler.bind(this, 'temperature')} value={this.state.temperature}>
+          <Slider min={10} max={35} onChange={this.changeHandler.bind(this, 'temperature')} value={this.state.temperature}>
             Temperature
         </Slider>
         </div>
@@ -63,7 +63,7 @@ class App extends Component {
           <YAxis />
           <CartesianGrid strokeDasharray="3 3" />
           <Tooltip />
-           <Legend />
+          <Legend />
           <Line type='monotone' dataKey='lowerBound' stroke='#8884d8' fill='#8884d8' />
           <Line type='monotone' dataKey='mean' stroke='#82ca9d' fill='#82ca9d' />
           <Line type='monotone' dataKey='upperBound' stroke='#ffc658' fill='#ffc658' />
