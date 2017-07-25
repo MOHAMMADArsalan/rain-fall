@@ -1,0 +1,68 @@
+.App {
+  /* text-align: center; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.range-container {
+  width: 12em;
+}
+input[type="range"] {
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  
+  background-color: dodgerblue;
+  height: 2px;
+  width: 100%;
+  outline: none;
+
+  border-radius: 5px;
+}
+input[type="range"]::-webkit-slider-thumb  {
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 1px 1px 5px lightgray, -1px -1px 5px lightgray ;
+}
+
+.slider-container {
+height: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#container {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px;
+  width: 800px;
+  height: 800px;
+  background-color: #fff;
+}
